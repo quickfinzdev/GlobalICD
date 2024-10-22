@@ -1,0 +1,28 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@mdi/font": "^7.3.67",
+        "@popperjs/core": "^2.11.6",
+        "@vitejs/plugin-vue": "^4.0.0",
+        "axios": "^1.6.1",
+        "bootstrap": "^5.2.3",
+        "laravel-vite-plugin": "^0.8.0",
+        "sass": "^1.56.1",
+        "vite": "^4.0.0",
+        "vue": "^3.2.37"
+    },
+    "dependencies": {
+        "html2pdf.js": "^0.10.1",
+        "qrcode": "^1.5.3",
+        "qrcode-vue3": "^1.6.8",
+        "vgauge": "^1.2.12-rc3",
+        "vue-router": "^4.2.5",
+        "vue-speedometer": "^2.0.0",
+        "vuetify": "^3.4.0-beta.1"
+    }
+}
