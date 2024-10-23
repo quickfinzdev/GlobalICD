@@ -58,7 +58,7 @@ export default {
     {
         async logout() {
             localStorage.removeItem('_uid');
-            this.$router.push('/')
+            this.$router.push('/login')
         },
 
     },
@@ -70,11 +70,11 @@ export default {
                     this.profile = response.data.profile;
                 }
                 else {
-                    this.$router.push('/')
+                    this.$router.push('/login')
                 }
             })
         } else {
-            this.$router.push('/')
+            this.$router.push('/login')
         }
 
 

@@ -3,7 +3,7 @@
 
         <v-row>
             <v-col cols="12 d-flex align-center">
-                
+
                 <div class="ml-4">
                     <h3 class="mb-0 roboto-thin" style="font-size: 1.5rem;  font-weight: 600; line-height: 1.25;">
                         Dashboard</h3>
@@ -59,9 +59,8 @@
 
                             <template v-slot:item.actions="{ item }">
                                 <div class="d-flex float-right">
-                                    <v-btn prepend-icon="mdi-eye" @click="view(item)"
-                                        color="blue-lighten-4" class="elevation-0 mr-1" size="small"
-                                        style="text-transform: none;">View</v-btn>
+                                    <v-btn prepend-icon="mdi-eye" @click="view(item)" color="blue-lighten-4"
+                                        class="elevation-0 mr-1" size="small" style="text-transform: none;">View</v-btn>
 
                                     <v-menu density="compact" size="">
                                         <template v-slot:activator="{ props }">
@@ -130,8 +129,9 @@
             </v-col>
 
             <v-col cols="6">
-                <v-text-field v-model="dataString.certificate_type" variant="outlined" label="Type of Certification"
-                    hide-details></v-text-field>
+                <v-autocomplete v-model="dataString.certificate_type"
+                    :items="['ISO 9001:2015', 'WHO GMP', 'CE', 'Halal', 'ISO 22000', 'ISO 9001', 'ISO 140001']"
+                    variant="outlined" label="Type of Certification" hide-details></v-autocomplete>
             </v-col>
 
             <v-col cols="6">
@@ -140,13 +140,13 @@
             </v-col>
 
             <v-col cols="6">
-                <v-text-field v-model="dataString.issue_date" variant="outlined" label="Issue Date"
-                    hide-details type="date"></v-text-field>
+                <v-text-field v-model="dataString.issue_date" variant="outlined" label="Issue Date" hide-details
+                    type="date"></v-text-field>
             </v-col>
 
             <v-col cols="6">
-                <v-text-field v-model="dataString.expiry_date" variant="outlined" label="Expiry date"
-                    hide-details type="date"></v-text-field>
+                <v-text-field v-model="dataString.expiry_date" variant="outlined" label="Expiry date" hide-details
+                    type="date"></v-text-field>
             </v-col>
 
 
@@ -181,18 +181,21 @@
                                     <div class="text-center">
                                         <v-img src="/images/logo1.png"
                                             style="max-width: 140px; display:block; margin:auto;"></v-img>
-                                        <h1 style="color: #2d4c81; text-transform:uppercase; font-weight:bold; margin-top:10px; font-size:30px;">
+                                        <h1
+                                            style="color: #2d4c81; text-transform:uppercase; font-weight:bold; margin-top:10px; font-size:30px;">
                                             International Certificate Desk</h1>
-                                        <h2 style="color: #cf1d31;   font-family: 'Jacquard 24', system-ui; font-size:40px;"> Certificate of Registration</h2>
+                                        <h2
+                                            style="color: #cf1d31;   font-family: 'Jacquard 24', system-ui; font-size:40px;">
+                                            Certificate of Registration</h2>
                                         <h2 style="color: #32506f;">The Quality Management System of
                                         </h2>
                                         <h1
-                                        style="color: #000; text-transform:uppercase; font-weight:bold; margin-top:20px;">
-                                        Budget System</h1>
+                                            style="color: #000; text-transform:uppercase; font-weight:bold; margin-top:20px;">
+                                            Budget System</h1>
                                         <div
                                             style="background-image: url('/images/logo2.png');background-size: 78%; background-position: center; padding: 30px 0;">
-                                           
-                                            <h4 style="color: #010101; font-size:16px">{{dataString.address}}</h4>
+
+                                            <h4 style="color: #010101; font-size:16px">{{ dataString.address }}</h4>
                                             <h4 style="color: #234478;">has been assessed and complies
                                                 with
                                                 the requirements of</h4>
@@ -208,23 +211,33 @@
                                         <div>
                                             <div style="display: flex;  font-size:17px;">
                                                 <div style="color: #234479;" class="mr-2">Certificate No:</div>
-                                                <div style="font-weight: bold;"> {{dataString.certificate_no}}</div>
+                                                <div style="font-weight: bold;"> {{ dataString.certificate_no }}</div>
                                             </div>
                                             <div style="display: flex;  font-size:17px;">
                                                 <div style="color: #234479;" class="mr-2">issue Date:</div>
-                                                <div style="font-weight: bold;"> {{convertDateFormat(dataString.issue_date)}}</div>
+                                                <div style="font-weight: bold;">
+                                                    {{ convertDateFormat(dataString.issue_date) }}</div>
                                             </div>
                                             <div style="display: flex;  font-size:17px;">
                                                 <div style="color: #234479;" class="mr-2">Expiry Date:</div>
-                                                <div style="font-weight: bold;"> {{convertDateFormat(dataString.expiry_date)}}</div>
+                                                <div style="font-weight: bold;">
+                                                    {{ convertDateFormat(dataString.expiry_date) }}</div>
                                             </div>
                                             <div style="display: flex;  font-size:17px;">
-                                                <div style="color: #234479;" class="mr-2">1st Surveillance (on or before):</div>
-                                                <div style="font-weight: bold;"> {{convertDateFormat(dataString.f_s_date)}}</div>
+                                                <div style="color: #234479;" class="mr-2">1st Surveillance (on or
+                                                    before):
+                                                </div>
+                                                <div style="font-weight: bold;">
+                                                    {{ convertDateFormat(dataString.f_s_date) }}
+                                                </div>
                                             </div>
                                             <div style="display: flex;  font-size:17px;">
-                                                <div style="color: #234479;" class="mr-2">2nd Surveillance (on or before):</div>
-                                                <div style="font-weight: bold;"> {{convertDateFormat(dataString.s_s_date)}}</div>
+                                                <div style="color: #234479;" class="mr-2">2nd Surveillance (on or
+                                                    before):
+                                                </div>
+                                                <div style="font-weight: bold;">
+                                                    {{ convertDateFormat(dataString.s_s_date) }}
+                                                </div>
                                             </div>
                                         </div>
                                         <div>
@@ -311,11 +324,11 @@ export default {
         },
     }),
     methods: {
-        view(item){
+        view(item) {
             this.dialog = true;
             this.dataString = item;
         },
-        edit(item){
+        edit(item) {
             this.dataString = item;
             this.drawer = true;
         },

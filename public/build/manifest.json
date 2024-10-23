@@ -1,6 +1,6 @@
 {
-  "_html2canvas-4dcdf46f.js": {
-    "file": "assets/html2canvas-4dcdf46f.js",
+  "_html2canvas-7ec55f98.js": {
+    "file": "assets/html2canvas-7ec55f98.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -23,7 +23,7 @@
     "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2"
   },
   "node_modules/canvg/lib/index.es.js": {
-    "file": "assets/index.es-796a8d88.js",
+    "file": "assets/index.es-cb59832c.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -36,7 +36,7 @@
     "src": "node_modules/dompurify/dist/purify.es.js"
   },
   "resources/js/app.css": {
-    "file": "assets/app-b5663d1b.css",
+    "file": "assets/app-6f9949d4.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -47,14 +47,14 @@
       "assets/materialdesignicons-webfont-61e8aba5.ttf"
     ],
     "css": [
-      "assets/app-b5663d1b.css"
+      "assets/app-6f9949d4.css"
     ],
     "dynamicImports": [
-      "_html2canvas-4dcdf46f.js",
+      "_html2canvas-7ec55f98.js",
       "node_modules/dompurify/dist/purify.es.js",
       "node_modules/canvg/lib/index.es.js"
     ],
-    "file": "assets/app-1de90a05.js",
+    "file": "assets/app-6ecc44af.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
